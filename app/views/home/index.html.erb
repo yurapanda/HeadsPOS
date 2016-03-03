@@ -1,2 +1,27 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="box-tile products-tile">
+	<%= link_to "Products", products_path, class: "tile-header" %>
+
+	<%= link_to "Add", new_product_path, class: "add-button"%>
+</div>
+
+
+<div class="box-tile services-tile">
+	<%= link_to "Services", services_path, class: "tile-header" %>
+
+	<%= link_to "Add", new_service_path, class: "add-button"%>
+</div>
+
+
+
+<div class="box-tile customers-tile">
+	<%= link_to "Customers", customers_path, class: "tile-header" %>
+
+	<%= link_to "Add", new_customer_path, class: "add-button"%>
+</div>
+
+
+<div class="box-tile stylists-tile">
+	<%= link_to "Stylists", stylists_path, class: "tile-header" %>
+
+	<%= link_to "Add", new_stylist_path , class: "add-button"%>
+</div>

@@ -1,3 +1,70 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$products-tile: rgba(34, 132, 212, 0.68);
+$services-tile: rgba(243, 215, 14, 0.71);
+$grayish-white: rgba(255, 255, 255, 0.65) ;
+.box-tile {
+    height: 25rem;
+    width: 44%;
+    margin: 3px auto;
+    display: inline-block;
+    .tile-header{
+        display: block;
+        position: relative;
+        font-weight: 700;
+        font-size: 3em;
+        letter-spacing: .1em;
+        text-align: center;
+        margin-top: 8rem;
+        text-decoration: none;
+        background:none;
+        color: rgba(255, 255, 255, 0.65);;
+        transition: color .4s ease-in-out;
+        &:hover{
+            color: white;
+        }
+
+
+    }
+}
+.box-tile.products-tile {
+    background-color: $products-tile;
+}
+
+.box-tile.services-tile{
+    background-color: $services-tile;
+}
+
+.box-tile.customers-tile {
+    background-color: rgba(226, 0, 0, 0.84);
+}
+
+.box-tile.stylists-tile {
+    background-color: rgba(2, 9, 88, 0.78);
+}
+
+.add-button{
+    display: block;
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: .1em;
+    text-align: center;
+    text-decoration: none;
+    background:none;
+    color: $grayish-white;
+    transition: color .4s ease-in-out;
+    transition: letter-spacing .001s ease-in-out;
+    &:hover{
+        color: white;
+        letter-spacing: .4em;
+        background:none;
+        text-decoration: none;
+        }
+    &:visited {
+    color: $grayish-white !important;
+    
+    }
+
+}
