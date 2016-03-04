@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :items
+  resources :items
+  resources :items
+  resources :items
   resources :stylists
   resources :customers
   resources :services

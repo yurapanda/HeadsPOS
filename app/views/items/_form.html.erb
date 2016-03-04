@@ -1,0 +1,20 @@
+<%= simple_form_for(@item) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :sku %>
+    <%= f.input :name %>
+    <%= f.input :price %>
+    <%= f.input :cost_price %>
+    <%= f.association :level %>
+    <%= f.association :item_type %>
+    <%= f.association :category %>
+    <%= f.input :stock_amount %>
+    <%= f.input :amount_sold %>
+    <%= f.input :description %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

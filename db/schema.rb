@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160302060937) do
+ActiveRecord::Schema.define(version: 20160304024027) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -50,8 +50,33 @@ ActiveRecord::Schema.define(version: 20160302060937) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "item_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string   "sku"
+    t.string   "name"
+    t.decimal  "price",        precision: 12, scale: 2
+    t.decimal  "cost_price",   precision: 12, scale: 2
+    t.integer  "level_id"
+    t.integer  "item_type_id"
+    t.integer  "category_id"
+    t.integer  "stock_amount"
+    t.integer  "amount_sold",                           default: 0
+    t.text     "description"
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+  end
+
+  add_index "items", ["category_id"], name: "index_items_on_category_id"
+  add_index "items", ["item_type_id"], name: "index_items_on_item_type_id"
+  add_index "items", ["level_id"], name: "index_items_on_level_id"
+
   create_table "levels", force: :cascade do |t|
-    t.integer  "number"
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
